@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Survive Hub - 離線災難與戰爭生存資訊備忘錄</title>
+  <title>Survive Hub - 緊急求生指南</title>
   <meta name="description" content="極致離線可用之防災、急救、避難、水質過濾與物資生存備忘錄。支援 PWA 快取、單檔 HTML 下載與 A4 實體手冊列印。">
   <meta name="theme-color" content="#000000">
-  
+
   <!-- PWA Manifest & Favicon Icons -->
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="icon" type="image/x-icon" href="./favicon.ico?v=2">
   <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico?v=2">
   <link rel="apple-touch-icon" href="./icon.svg">
-  
+
   <!-- CSS Design System -->
   <link rel="stylesheet" href="./src/style.css">
 </head>
+
 <body>
 
   <!-- Screen SOS Strobe Overlay -->
@@ -29,39 +31,66 @@
       <a href="#" class="brand">
         <div class="brand-icon">
           <svg viewBox="0 0 512 512">
-            <path d="M256 48 L416 112 V240 C416 340 346 428 256 464 C166 428 96 340 96 240 V112 Z" fill="#000" stroke="#f59e0b" stroke-width="30"/>
-            <rect x="232" y="160" width="48" height="160" rx="8" fill="#f59e0b"/>
-            <rect x="176" y="216" width="160" height="48" rx="8" fill="#f59e0b"/>
+            <path d="M256 48 L416 112 V240 C416 340 346 428 256 464 C166 428 96 340 96 240 V112 Z" fill="#000"
+              stroke="#f59e0b" stroke-width="30" />
+            <rect x="232" y="160" width="48" height="160" rx="8" fill="#f59e0b" />
+            <rect x="176" y="216" width="160" height="48" rx="8" fill="#f59e0b" />
           </svg>
         </div>
         <div class="brand-text">
-          <h1>Survive Hub</h1>
-          <span>離線災難與生存資訊</span>
+          <h2>Survive Hub</h2>
+          <h3>緊急求生指南</h3>
         </div>
       </a>
 
       <div class="header-actions">
         <button id="btn-memo-trigger" class="btn" title="編輯個人緊急聯絡備忘錄">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+          </svg>
           <span>緊急備忘</span>
         </button>
 
         <button id="btn-calc-trigger" class="btn" title="開啟物資計算機">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="18" x2="16" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="8" y1="10" x2="8" y2="10.01"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="2" width="16" height="20" rx="2" />
+            <line x1="8" y1="6" x2="16" y2="6" />
+            <line x1="16" y1="14" x2="16" y2="14.01" />
+            <line x1="12" y1="14" x2="12" y2="14.01" />
+            <line x1="8" y1="14" x2="8" y2="14.01" />
+            <line x1="16" y1="18" x2="16" y2="18.01" />
+            <line x1="12" y1="18" x2="12" y2="18.01" />
+            <line x1="8" y1="18" x2="8" y2="18.01" />
+            <line x1="16" y1="10" x2="16" y2="10.01" />
+            <line x1="12" y1="10" x2="12" y2="10.01" />
+            <line x1="8" y1="10" x2="8" y2="10.01" />
+          </svg>
           <span>物資計算</span>
         </button>
 
         <button id="btn-print" class="btn" title="列印成 A4 實體手冊">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9" />
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+            <rect x="6" y="14" width="12" height="8" />
+          </svg>
           <span>列印手冊</span>
         </button>
 
         <button id="btn-contrast" class="btn" title="切換極高對比/省電模式">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor" />
+          </svg>
         </button>
 
         <button id="btn-sos-trigger" class="btn btn-sos" title="啟動 SOS 國際求救聲光訊號">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+          </svg>
           <span>SOS 求救</span>
         </button>
       </div>
@@ -70,8 +99,12 @@
 
   <!-- Special Print Header (Visible only when printing) -->
   <div class="print-header">
-    <h1>Survive Hub 離線生存與災難防護緊急備忘手冊</h1>
-    <p>列印時間：<span id="print-date"></span> | 斷網時備用靜態資訊檔案</p>
+    <center>
+      <h1>緊急求生指南</h1>
+    </center>
+    <center>
+      <p>列印時間：<span id="print-date"></span> | 斷網時備用靜態資訊檔案</p>
+    </center>
   </div>
 
   <!-- Main Content Container -->
@@ -82,7 +115,10 @@
       <h2 class="search-title">離線災難與戰爭求生檢索</h2>
       <p class="search-desc">輸入關鍵字（如：止血、淨水、空襲、核塵、輻射）即時過濾離線指南：</p>
       <div class="search-bar">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
         <input type="text" id="search-input" class="search-input" placeholder="搜尋急救、過濾、避難與物資指引..." autocomplete="off">
       </div>
     </section>
@@ -91,29 +127,38 @@
     <section class="quick-tools">
       <div class="tool-card">
         <div class="tool-icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
         </div>
         <div class="tool-info">
           <h3>SOS 聲光求救器</h3>
           <p>發出國際 SOS 頻率穿透高音與螢幕高亮閃爍信號。</p>
-          <button id="card-sos-btn" class="btn btn-sos" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">啟動求救</button>
+          <button id="card-sos-btn" class="btn btn-sos"
+            style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">啟動求救</button>
         </div>
       </div>
 
       <div class="tool-card">
         <div class="tool-icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
         </div>
         <div class="tool-info">
           <h3>防護物資與水計算機</h3>
           <p>動態評估指定人數與天數之飲水、熱量與醫療品。</p>
-          <button id="card-calc-btn" class="btn btn-amber" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">開啟計算器</button>
+          <button id="card-calc-btn" class="btn btn-amber"
+            style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">開啟計算器</button>
         </div>
       </div>
 
       <div class="tool-card">
         <div class="tool-icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+          </svg>
         </div>
         <div class="tool-info">
           <h3>個人緊急聯絡備忘</h3>
@@ -124,12 +169,17 @@
 
       <div class="tool-card">
         <div class="tool-icon-wrapper">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
         </div>
         <div class="tool-info">
           <h3>離線單檔備份</h3>
           <p>可離線儲存此單一 HTML，無網路時亦可用藍牙分享。</p>
-          <button id="card-save-btn" class="btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">儲存 HTML 靜態檔</button>
+          <button id="card-save-btn" class="btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">儲存 HTML
+            靜態檔</button>
         </div>
       </div>
     </section>
@@ -152,11 +202,15 @@
       <div class="modal-header">
         <h3 class="modal-title">個人離線緊急聯絡與身分備忘錄</h3>
         <button class="modal-close" id="memo-close-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
       </div>
 
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">本資料僅離線儲存於您的手機/電腦瀏覽器內部（localStorage），絕不上傳任何伺服器。</p>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+        本資料僅離線儲存於您的手機/電腦瀏覽器內部（localStorage），絕不上傳任何伺服器。</p>
 
       <div class="form-row">
         <div class="form-group">
@@ -202,7 +256,10 @@
       <div class="modal-header">
         <h3 class="modal-title">防護物資與水資源配給計算機</h3>
         <button class="modal-close" id="modal-close-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
       </div>
 
@@ -226,7 +283,8 @@
           </select>
         </div>
         <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem;">
-          <input type="checkbox" id="calc-vulnerable" style="width: 18px; height: 18px; accent-color: var(--accent-amber);">
+          <input type="checkbox" id="calc-vulnerable"
+            style="width: 18px; height: 18px; accent-color: var(--accent-amber);">
           <label for="calc-vulnerable" style="font-size: 0.875rem; cursor: pointer;">包含嬰幼兒/孕婦/高齡者（加增熱量）</label>
         </div>
       </div>
@@ -265,11 +323,13 @@
 
   <!-- App Footer -->
   <footer class="app-footer">
-    <p>Survive Hub 離線生存資訊備忘錄 | 系統狀態：<span id="cache-status" style="color: var(--accent-green); font-weight: 600;">檢查快取中...</span></p>
+    <p>Survive Hub 離線生存資訊備忘錄 | 系統狀態：<span id="cache-status"
+        style="color: var(--accent-green); font-weight: 600;">檢查快取中...</span></p>
     <p style="margin-top: 0.3rem;">請隨時將本頁面匯出為實體 HTML 檔案或列印成 A4 避難包紙本。</p>
   </footer>
 
   <!-- Application Logic script entry -->
   <script type="module" src="./src/js/app.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Shield Border Aura -->
+  <path d="M256 52 L420 120 V250 C420 355 348 445 256 480 C164 445 92 355 92 250 V120 Z" 
+        fill="none" stroke="#fbbf24" stroke-width="12" opacity="0.3" />
+
+  <!-- Main Shield -->
+  <path d="M256 68 L400 128 V244 C400 340 334 424 256 456 C178 424 112 340 112 244 V128 Z" 
+        fill="#090d16" stroke="url(#shieldGrad)" stroke-width="24" stroke-linejoin="round" />
+
+  <!-- Center Survival / Medical Emergency Cross Symbol -->
+  <g fill="url(#shieldGrad)">
+    <rect x="232" y="160" width="48" height="176" rx="10" />
+    <rect x="168" y="224" width="176" height="48" rx="10" />
+  </g>
+
+  <!-- Center Core SOS Pulse -->
+  <circle cx="256" cy="248" r="18" fill="#090d16" />
+  <circle cx="256" cy="248" r="9" fill="#fbbf24" />
+</svg>

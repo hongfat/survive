@@ -41,6 +41,11 @@
       </a>
 
       <div class="header-actions">
+        <button id="btn-memo-trigger" class="btn" title="編輯個人緊急聯絡備忘錄">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          <span>緊急備忘</span>
+        </button>
+
         <button id="btn-calc-trigger" class="btn" title="開啟物資計算機">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="14.01"/><line x1="12" y1="14" x2="12" y2="14.01"/><line x1="8" y1="14" x2="8" y2="14.01"/><line x1="16" y1="18" x2="16" y2="18.01"/><line x1="12" y1="18" x2="12" y2="18.01"/><line x1="8" y1="18" x2="8" y2="18.01"/><line x1="16" y1="10" x2="16" y2="10.01"/><line x1="12" y1="10" x2="12" y2="10.01"/><line x1="8" y1="10" x2="8" y2="10.01"/></svg>
           <span>物資計算</span>
@@ -108,10 +113,21 @@
 
       <div class="tool-card">
         <div class="tool-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </div>
+        <div class="tool-info">
+          <h3>個人緊急聯絡備忘</h3>
+          <p>保存個人血型、緊急聯絡人與約定會合避難點。</p>
+          <button id="card-memo-btn" class="btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">編輯聯絡卡</button>
+        </div>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon-wrapper">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         </div>
         <div class="tool-info">
-          <h3>離線離線單檔與備份</h3>
+          <h3>離線單檔備份</h3>
           <p>可離線儲存此單一 HTML，無網路時亦可用藍牙分享。</p>
           <button id="card-save-btn" class="btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">儲存 HTML 靜態檔</button>
         </div>
@@ -129,6 +145,56 @@
     </section>
 
   </main>
+
+  <!-- Emergency Memo Modal Dialog -->
+  <div class="modal-overlay" id="memo-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">個人離線緊急聯絡與身分備忘錄</h3>
+        <button class="modal-close" id="memo-close-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">本資料僅離線儲存於您的手機/電腦瀏覽器內部（localStorage），絕不上傳任何伺服器。</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="memo-name">個人姓名 / 暱稱</label>
+          <input type="text" id="memo-name" class="form-control" placeholder="例：張小明">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="memo-blood">血型 & 特殊病史 / 藥物過敏</label>
+          <input type="text" id="memo-blood" class="form-control" placeholder="例：O 型 / 對青黴素過敏">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="memo-contact-name">第一緊急聯絡人姓名</label>
+          <input type="text" id="memo-contact-name" class="form-control" placeholder="例：張大華 (父親)">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="memo-contact-phone">緊急聯絡人電話 / 通訊頻道</label>
+          <input type="text" id="memo-contact-phone" class="form-control" placeholder="例：0912-345-678 / FRS Ch 1">
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label class="form-label" for="memo-meeting-point">家屬約定避難與會合地點</label>
+        <input type="text" id="memo-meeting-point" class="form-control" placeholder="例：市立中學活動中心前升旗台">
+      </div>
+
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label class="form-label" for="memo-notes">其他重要防護與備忘記事</label>
+        <textarea id="memo-notes" class="form-control" rows="3" placeholder="輸入個人慢性病用藥名稱、避難包放置位置等備忘事項..."></textarea>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 1.5rem;">
+        <button id="memo-save-btn" class="btn btn-amber">儲存離線備忘</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Calculator Modal Dialog -->
   <div class="modal-overlay" id="calc-modal">

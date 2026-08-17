@@ -1,8 +1,9 @@
-const CACHE_NAME = 'survive-v1';
+const CACHE_NAME = 'survive-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './favicon.ico',
   './favicon.svg',
   './icon.svg'
 ];

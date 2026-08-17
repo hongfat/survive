@@ -1,0 +1,17 @@
+{
+  "name": "Survive Hub - 離線災難與生存資訊",
+  "short_name": "Survive",
+  "description": "極致離線可用之防災、急救、避難與物資生存備忘錄",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

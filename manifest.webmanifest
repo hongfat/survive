@@ -1,7 +1,7 @@
 {
-  "name": "Survive Hub - 離線災難與生存資訊",
+  "name": "Survive - 緊急避難與生存指南",
   "short_name": "Survive",
-  "description": "極致離線可用之防災、急救、避難與物資生存備忘錄",
+  "description": "離線可用之防災、急救、避難與物資生存指南",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",

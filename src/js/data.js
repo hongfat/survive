@@ -248,9 +248,9 @@ export const SURVIVAL_GUIDES = [
     severity: 'info',
     summary: '危機與戰時狀態下，敵方常散播假新聞、深偽 (Deepfake) 影音與恐慌言論。民眾應提高警覺，認明權威官方管道，不轉傳未經證實之網路傳言。',
     steps: [
-      '認明權威官方管道：以總統府 (<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>)、行政院 (<a href="https://www.ey.gov.tw/" target="_blank" rel="noopener">www.ey.gov.tw</a>) 及國防部《臺灣全民安全指引》( <a href="https://prepare.mnd.gov.tw/" target="_blank" rel="noopener">prepare.mnd.gov.tw</a>) 公告為準。',
+      '認明權威官方管道：以總統府 (<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>)、行政院 (<a href="https://www.ey.gov.tw/" target="_blank" rel="noopener">www.ey.gov.tw</a>) 及國防部 ( <a href="https://www.mnd.gov.tw/" target="_blank" rel="noopener">www.mnd.gov.tw</a>) 公告為準。',
       '查驗重大異動新聞：遇到「元首遭挾持」、「政府投降」或「水廠投毒」等極端傳言，切勿隨意轉發。',
-      '善用民間第三方查核平台：通訊正常時使用台灣事實查核中心 (<a href="https://factcheck.org.tw/" target="_blank" rel="noopener">factcheck.org.tw</a>) 或 MyGoPen (<a href="https://www.mygopen.com/" target="_blank" rel="noopener">www.mygopen.com</a>) 查驗真實性。',
+      '善用民間第三方查核平台：通訊正常時使用台灣事實查核中心 (<a href="https://tfc-taiwan.org.tw/" target="_blank" rel="noopener">tfc-taiwan.org.tw</a>) 或 MyGoPen (<a href="https://www.mygopen.com/" target="_blank" rel="noopener">www.mygopen.com</a>) 查驗真實性。',
       '防範深偽 (Deepfake) 影音：戰時敵方可能利用 AI 生成政治人物偽造影音，應以廣播電台（漢聲/警廣）及官方新聞稿交叉比對。',
       '保持心理韌性：避免焦慮與集體恐慌傳播，專注於個人防護與社區互助。'
     ],
@@ -265,11 +265,13 @@ export const SURVIVAL_GUIDES = [
     severity: 'info',
     summary: '彙整政府權威防災、國防動員與災害防救官方入口網站，便於平時儲存書籤與災時查詢權威發布。',
     steps: [
+      '內政部消防署全民防災 e 點通：<a href="https://bear.emic.gov.tw/" target="_blank" rel="noopener">bear.emic.gov.tw</a>（災害應變、避難地圖與親友報平安）。',
+      '災害情資網：<a href="https://eocdss.ncdr.nat.gov.tw" target="_blank" rel="noopener">eocdss.ncdr.nat.gov.tw</a>（即時災情處置與中央應變公告）。',
+      '總統府新聞與聲明：<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>（國家元首重大演講與緊急命令宣告）。',
+      '行政院新聞與公告：<a href="https://www.ey.gov.tw/" target="_blank" rel="noopener">www.ey.gov.tw</a>（行政院重大政策與公告）。',
+      '國防部新聞與公告：<a href="https://www.mnd.gov.tw/" target="_blank" rel="noopener">www.mnd.gov.tw</a>（國防部重大軍事新聞與公告）。',
       '國防部全民安全指引：<a href="https://prepare.mnd.gov.tw/" target="_blank" rel="noopener">prepare.mnd.gov.tw</a>（全民國防應變手冊與應變指引）。',
-      '國防部全民防衛動員署：<a href="https://aodm.mnd.gov.tw/" target="_blank" rel="noopener">aodm.mnd.gov.tw</a>（動員資訊、民防與全民國防手冊下載）。',
-      '內政部全民防災 e 點通：<a href="https://bear.emic.gov.tw/" target="_blank" rel="noopener">bear.emic.gov.tw</a>（災害應變、避難地圖與親友報平安）。',
-      '中央災害應變中心 (EMIC)：<a href="https://www.emic.gov.tw/" target="_blank" rel="noopener">www.emic.gov.tw</a>（即時災情處置與中央應變公告）。',
-      '總統府新聞與聲明：<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>（國家元首重大演講與緊急命令宣告）。'
+      '國防部全民防衛動員署：<a href="https://adma.mnd.gov.tw/" target="_blank" rel="noopener">adma.mnd.gov.tw</a>（動員資訊、民防與全民國防手冊下載）。'
     ],
     tips: [
       '建議將上述權威網站預先儲存於手機瀏覽器書籤或離線網頁，通訊微弱時快速取用。'

@@ -278,11 +278,43 @@ export const SURVIVAL_GUIDES = [
     ]
   },
   {
+    id: 'cbrn-earthquake-tsunami',
+    categoryId: 'cbrn-disaster',
+    title: '強烈地震與海嘯安全應變與疏散指引',
+    severity: 'critical',
+    summary: '參考國防部《臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-responses" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-responses</a>）。強震發布實施「趴下、掩護、穩住」；海嘯警報發布立即往高處疏散。',
+    steps: [
+      '地震趴下掩護穩住：雙膝跪地趴下 (Drop)，躲入堅固桌下掩護頭頸 (Cover)，抓住桌腳穩住 (Hold on)。',
+      '遠離危險區域：室內遠離玻璃窗、高懸掛物及未固定家具；戶外遠離高樓外牆、招牌與電線桿。',
+      '海嘯警報發布處置：聽聞海嘯警報或沿海感受強烈地震，立即往海拔較高之高地或 3 樓以上堅固鋼筋混凝土大樓高層疏散。',
+      '震後檢查切斷電源瓦斯：主震停止後，關閉瓦斯總開關與電源總開關，隨身攜帶個人避難包移動。'
+    ],
+    tips: [
+      '地震時絕不上樓或下樓奔跑，絕不搭乘電梯，順手將門打開防止門框變形受困。'
+    ]
+  },
+  {
+    id: 'cbrn-building-collapse',
+    categoryId: 'cbrn-disaster',
+    title: '建築物倒塌與火災煙霧緊急避難',
+    severity: 'warning',
+    summary: '參考國防部《臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-responses" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-responses</a>）。遭遇砲擊或地震引發建物坍塌與火災時之逃生姿勢。',
+    steps: [
+      '火災濃煙避難：採低姿勢爬行（濃煙向上懸浮），用濕毛巾或衣物掩住口鼻。',
+      '切勿搭乘電梯：火災與空襲時電梯極易斷電故障，一律走安全梯疏散。',
+      '受困瓦礫堆：用衣物護住口鼻防塵，清除口鼻雜物，擴大生存呼吸空間。',
+      '節省體力求救：聽到搜救聲響時，用硬物規律敲擊金屬管道或牆壁（三短三長三短）。'
+    ],
+    tips: [
+      '受困時切勿盲目大聲喊叫，以免吸入過多粉塵或耗盡氧氣與體力。'
+    ]
+  },
+  {
     id: 'cbrn-fallout-chemical',
     categoryId: 'cbrn-disaster',
     title: '核化生 (CBRN) 威脅與輻射塵防護',
     severity: 'critical',
-    summary: '核爆產生強烈閃光、衝擊波與放射性輻射塵。遵循「時間、距離、遮蔽」防護三原則。',
+    summary: '參考國防部《臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-responses" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-responses</a>）。核爆產生強烈閃光、衝擊波與放射性輻射塵，遵循「時間、距離、遮蔽」三原則。',
     steps: [
       '避開核爆閃光：切勿直視閃光，立即背向爆心臥倒，掩住口鼻。',
       '15 分鐘內掩蔽：衝擊波過後，於 15 分鐘內進入最厚的鋼筋混凝土地下室或建築中心。',
@@ -295,19 +327,19 @@ export const SURVIVAL_GUIDES = [
     ]
   },
   {
-    id: 'cbrn-building-collapse',
+    id: 'cbrn-utilities-outage',
     categoryId: 'cbrn-disaster',
-    title: '建築物倒塌與火災煙霧緊急避難',
+    title: '民生水電設施與通訊中斷維生應對',
     severity: 'warning',
-    summary: '遭遇砲擊或地震引發建物坍塌與火災時，冷靜應變並採用正確姿勢求生。',
+    summary: '參考國防部《臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-responses" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-responses</a>）。基礎設施受損停水停電時之物資配給、替代能源與資訊接收處置。',
     steps: [
-      '火災濃煙避難：採低姿勢爬行（濃煙向上懸浮），用濕毛巾或衣物掩住口鼻。',
-      '切勿搭乘電梯：火災與空襲時電梯極易斷電故障，一律走安全梯疏散。',
-      '受困瓦礫堆：用衣物護住口鼻防塵，清除口鼻雜物，擴大生存呼吸空間。',
-      '節省體力求救：聽到搜救聲響時，用硬物規律敲擊金屬管道或牆壁（三短三長三短）。'
+      '飲水定量配給：優先飲用包裝水，取用天然水（雨水/河水）必須經過濾滾沸 1 分鐘以上消毒。',
+      '食物保存順序：優先食用冷藏易腐食品，次為冷凍食品，最後食用常溫罐頭與乾糧。',
+      '安全使用卡式爐：在通風良好處使用卡式爐，切勿於密閉室內使用以防一氧化碳中毒。',
+      '通訊廣播與報平安：使用手搖/電池收音機收聽 FM 104.9 / 漢聲廣播，利用「消防防災 e 點通 App」傳送平安簡訊。'
     ],
     tips: [
-      '受困時切勿盲目大聲喊叫，以免吸入過多粉塵或耗盡氧氣與體力。'
+      '停電時關閉主要家電電源開關，避免復電瞬間高壓湧浪損壞家電或引發火警。'
     ]
   },
   {

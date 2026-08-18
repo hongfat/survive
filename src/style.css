@@ -124,6 +124,25 @@ body {
   display: block;
 }
 
+.mnd-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.45rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid var(--accent-amber);
+  border-radius: 12px;
+  color: var(--accent-amber);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.mnd-badge:hover {
+  background: var(--accent-amber);
+  color: #000000;
+}
+
 .header-actions {
   display: flex;
   align-items: center;

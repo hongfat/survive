@@ -1,4 +1,4 @@
-const MEMO_STORAGE_KEY = 'survive_emergency_memo_v1';
+const MEMO_STORAGE_KEY = 'survive_emergency_memo_v2';
 
 const DEFAULT_MEMO = {
   name: '',
@@ -6,7 +6,9 @@ const DEFAULT_MEMO = {
   allergies: '',
   contactName: '',
   contactPhone: '',
+  mnd1991Phone: '',
   meetingPoint: '',
+  secondaryMeetingPoint: '',
   notes: ''
 };
 

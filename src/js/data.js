@@ -11,19 +11,37 @@ export const SURVIVAL_CATEGORIES = [
 
 export const SURVIVAL_GUIDES = [
   {
-    id: 'prep-gobag-basics',
+    id: 'prep-household-supplies',
     categoryId: 'prep',
-    title: '個人緊急避難包準備與重量配比',
+    title: '日常居家儲備與 7 天物資準備原則',
     severity: 'critical',
-    summary: '參考國防部《臺灣全民安全指引》，緊急避難包應以雙肩後背包為主，維持個人 1 至 3 天生存需求，重量控制於體重 10% 至 15%（男性約 15 公斤，女性約 10 公斤）。',
+    summary: '依據國防部《臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-supplies/househeld" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-supplies/househeld</a>），居家防護應以家庭為單位儲備至少 7 天份生活物資，採「滾動式循環儲備 (FIFO)」維護效期。',
     steps: [
-      '選擇耐磨、防水、具雙肩背帶之後背包，放置於玄關或出口處隨手可抓取位置。',
-      '每人應獨立準備一包，切勿多人合用一包，確保動員逃生效率。',
-      '標示個人身分卡：於背包外側放置緊急聯絡人姓名、電話及血型卡。',
-      '定時更新維護：每 6 個月檢查一次水、糧食、藥品效期及電池電量。'
+      '飲水儲備：以每人每日至少 3 公升計算，準備全家 7 天份飲用水與基礎清潔料理水。',
+      '常溫糧食：儲備可常溫保存之罐頭、即食飯、泡麵、乾燥飯、能量餅乾與基本調味料。',
+      '家庭急救箱：備妥優碘、棉棒、紗布、外傷藥膏及全家慢性病處方藥（至少 7 天份）。',
+      '能源與照明：LED 應急燈、手電筒、多組 AA/AAA 備用電池、行動電源，並在通風良好處備卡式爐與瓦斯罐。',
+      '管理原則：採「先進先出 (FIFO)」先進食舊存貨並補充新物資，分散儲放避免單點受損。'
     ],
     tips: [
-      '包裝防水：建議將袋內物資使用透明夾鏈袋分開密封包裝，確保泡水時仍可正常使用。'
+      '家中有嬰幼兒、長者或寵物者，應預先儲備專用奶粉、尿布、助聽器電池或寵物飼料。'
+    ]
+  },
+  {
+    id: 'prep-gobag-basics',
+    categoryId: 'prep',
+    title: '個人緊急避難包準備與 1 至 3 天撤離配比',
+    severity: 'critical',
+    summary: '依據國防部指引（<a href="https://prepare.mnd.gov.tw/emergency-supplies/personal" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-supplies/personal</a>），撤離時每人應獨立攜帶一包維持 1 至 3 天生存需求之雙肩避難包，重量控制於體重 10% 至 15%（男性約 15 公斤，女性約 10 公斤）。',
+    steps: [
+      '放置隨手可及處：選擇質輕防水雙肩後背包，放置於玄關、大門口或床頭隨手可抓取位置。',
+      '每人獨立備包：每位家庭成員獨立準備一包，切勿多人共用一包，確保撤離逃生效率。',
+      '核心隨身物資：飲用水、能量乾糧（1-3 天）、個人急救包與處方藥、證件影本與小額現金。',
+      '防護保暖與工具：保暖太空毯、輕便雨衣、耐磨工作手套、高分貝哨子、手電筒、防災收音機。',
+      '定期維護提醒：每 6 個月檢查糧食藥品效期，可善用「消防防災 e 點通 App」設定半年維護提醒。'
+    ],
+    tips: [
+      '建議將袋內物資使用透明夾鏈袋分裝密封，確保泡水時物資仍可正常使用。'
     ]
   },
   {
@@ -210,9 +228,10 @@ export const SURVIVAL_GUIDES = [
     categoryId: 'comms-info',
     title: '親友報平安與「消防防災 e 點通」系統',
     severity: 'info',
-    summary: '原 1991 報平安專線與網站已於 2022 年底正式終止服務。現由內政部消防署「消防防災 e 點通 App」與「全民防災 e 點通 (bear.emic.gov.tw)」提供親友報平安與災區查詢服務。',
+    summary: '原 1991 報平安專線與網站已於 2022 年底正式終止服務。現由內政部消防署「消防防災 e 點通 App」與「全民防災 e 點通 (<a href="https://bear.emic.gov.tw" target="_blank" rel="noopener">bear.emic.gov.tw</a>)」提供親友報平安與災區查詢服務。',
     steps: [
-      '預先下載系統：於智慧型手機安裝「消防防災 e 點通 App」或瀏覽「全民防災 e 點通 (bear.emic.gov.tw)」。',
+      '預先下載系統：於智慧型手機安裝「消防防災 e 點通 App」或瀏覽「全民防災 e 點通 (<a href="https://bear.emic.gov.tw" target="_blank" rel="noopener">bear.emic.gov.tw</a>)」。',
+      '離線地圖功能：預先下載離線地圖，網路中斷時仍可查詢避難路線與緊急避難場所位置。',
       '發送平安簡訊：災時利用 App 內的「平安簡訊」功能，一鍵發送預設平安訊息與定位給親友（支援簡訊與社群平台）。',
       '災區親友現況查詢：至「災區親友現況查詢平台」查詢撤離、收容與傷亡人員資料，確認家屬安危。',
       '緊急求救電話：生命危急、火災或嚴重受困請直撥 119 或 110（切勿將報平安系統用於急難救助）。',
@@ -227,15 +246,33 @@ export const SURVIVAL_GUIDES = [
     categoryId: 'comms-info',
     title: '戰時假訊息查證與認知防禦原則',
     severity: 'info',
-    summary: '危機與戰時狀態下，敵方常散播假新聞與恐慌言論。民眾應提高警覺，不轉傳未經證實之網路傳言。',
+    summary: '危機與戰時狀態下，敵方常散播假新聞、深偽 (Deepfake) 影音與恐慌言論。民眾應提高警覺，認明權威官方管道，不轉傳未經證實之網路傳言。',
     steps: [
-      '認明官方管道：以總統府、行政院、國防部 prepare.mnd.gov.tw 及中央災害應變中心發布為準。',
-      '驗證訊息來源：遇到「政府已投降」、「水廠遭投毒」等重大訊息，切勿直接轉發。',
-      '利用查核工具：通訊正常時使用 MyGoPen、台灣事實查核中心進行查證。',
-      '保持心理韌性：避免陷入焦慮，專注於個人防護與社區互助。'
+      '認明權威官方管道：以總統府 (<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>)、行政院 (<a href="https://www.ey.gov.tw/" target="_blank" rel="noopener">www.ey.gov.tw</a>) 及國防部《臺灣全民安全指引》( <a href="https://prepare.mnd.gov.tw/" target="_blank" rel="noopener">prepare.mnd.gov.tw</a>) 公告為準。',
+      '查驗重大異動新聞：遇到「元首遭挾持」、「政府投降」或「水廠投毒」等極端傳言，切勿隨意轉發。',
+      '善用民間第三方查核平台：通訊正常時使用台灣事實查核中心 (<a href="https://factcheck.org.tw/" target="_blank" rel="noopener">factcheck.org.tw</a>) 或 MyGoPen (<a href="https://www.mygopen.com/" target="_blank" rel="noopener">www.mygopen.com</a>) 查驗真實性。',
+      '防範深偽 (Deepfake) 影音：戰時敵方可能利用 AI 生成政治人物偽造影音，應以廣播電台（漢聲/警廣）及官方新聞稿交叉比對。',
+      '保持心理韌性：避免焦慮與集體恐慌傳播，專注於個人防護與社區互助。'
     ],
     tips: [
-      '戰時網路可能出現偽造的政治人物深偽 (Deepfake) 影音，須以官方廣播與新聞稿交叉比對。'
+      '未經查證之戰時軍情傳言轉發可能觸犯法令並造成社會恐慌，請恪遵不造謠、不信謠、不傳謠原則。'
+    ]
+  },
+  {
+    id: 'comms-official-channels',
+    categoryId: 'comms-info',
+    title: '國家重大危機與防災官方資訊管道彙整',
+    severity: 'info',
+    summary: '彙整政府權威防災、國防動員與災害防救官方入口網站，便於平時儲存書籤與災時查詢權威發布。',
+    steps: [
+      '國防部全民安全指引：<a href="https://prepare.mnd.gov.tw/" target="_blank" rel="noopener">prepare.mnd.gov.tw</a>（全民國防應變手冊與應變指引）。',
+      '國防部全民防衛動員署：<a href="https://aodm.mnd.gov.tw/" target="_blank" rel="noopener">aodm.mnd.gov.tw</a>（動員資訊、民防與全民國防手冊下載）。',
+      '內政部全民防災 e 點通：<a href="https://bear.emic.gov.tw/" target="_blank" rel="noopener">bear.emic.gov.tw</a>（災害應變、避難地圖與親友報平安）。',
+      '中央災害應變中心 (EMIC)：<a href="https://www.emic.gov.tw/" target="_blank" rel="noopener">www.emic.gov.tw</a>（即時災情處置與中央應變公告）。',
+      '總統府新聞與聲明：<a href="https://www.president.gov.tw/" target="_blank" rel="noopener">www.president.gov.tw</a>（國家元首重大演講與緊急命令宣告）。'
+    ],
+    tips: [
+      '建議將上述權威網站預先儲存於手機瀏覽器書籤或離線網頁，通訊微弱時快速取用。'
     ]
   },
   {
@@ -274,10 +311,10 @@ export const SURVIVAL_GUIDES = [
   {
     id: 'checklist-mnd-gobag',
     categoryId: 'checklist',
-    title: '國防部《全民安全指引》避難包 15 大物資點檢表（點擊勾選記錄）',
+    title: '個人緊急避難包 15 大物資點檢表（1-3 天撤離用）',
     severity: 'info',
     isInteractiveChecklist: true,
-    summary: '對齊國防部《當危機來臨時：臺灣全民安全指引》規範之個人 1 至 3 天輕量避難包物資。請勾選已備妥項目，系統離線自動保存進度。',
+    summary: '參考國防部《當危機來臨時：臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-supplies/personal" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-supplies/personal</a>）規範之個人 1 至 3 天輕量避難包物資。請勾選已備妥項目，系統離線自動保存進度。',
     items: [
       { id: 'gb-water', text: '1. 飲用水：1.5 至 2 公升瓶裝水（每人每日至少 3L 基本生活水）。' },
       { id: 'gb-food', text: '2. 高熱量乾糧：能量棒、高熱量餅乾、肉乾（即開即食免加熱）。' },
@@ -299,6 +336,30 @@ export const SURVIVAL_GUIDES = [
     tips: [
       '避難包總重量不應超過使用者體重的 10% 至 15%。',
       '每 6 個月定時檢查一次避難包內食物與藥品有效期限。'
+    ]
+  },
+  {
+    id: 'checklist-household-supplies',
+    categoryId: 'checklist',
+    title: '日常居家儲備 10 大物資點檢表（7 天居家避難用）',
+    severity: 'info',
+    isInteractiveChecklist: true,
+    summary: '參考國防部《當危機來臨時：臺灣全民安全指引》（<a href="https://prepare.mnd.gov.tw/emergency-supplies/househeld" target="_blank" rel="noopener">prepare.mnd.gov.tw/emergency-supplies/househeld</a>）規範之 7 天居家避難物資。採「滾動式循環儲備 (FIFO)」，請勾選家中已備妥項目。',
+    items: [
+      { id: 'hh-water', text: '1. 居家飲用與生活水：每人每日至少 3 公升（全家 7 天份預備量）。' },
+      { id: 'hh-food', text: '2. 常溫耐保存糧食：罐頭、即食飯、泡麵、乾燥飯、高熱量餅乾、基本調味料。' },
+      { id: 'hh-firstaid', text: '3. 家庭急救箱：優碘、棉棒、無菌紗布、外傷藥膏、全家慢性病處方藥（至少 7 天份）。' },
+      { id: 'hh-hygiene', text: '4. 居家衛生防疫：口罩、衛生紙、酒精噴霧、濕紙巾、洗沐用品、生理用品。' },
+      { id: 'hh-lighting', text: '5. 應急照明與電池：LED 照明燈、手電筒、多組 AA/AAA 鹼性電池、大容量行動電源。' },
+      { id: 'hh-radio', text: '6. 防災資訊廣播：可攜式 FM/AM 收音機（收聽各地區漢聲/警廣官方頻道）。' },
+      { id: 'hh-cooking', text: '7. 簡易烹煮設備：卡式爐、備用卡式瓦斯罐（於通風良好處使用）、開罐器。' },
+      { id: 'hh-tools', text: '8. 防護與清潔工具：耐磨工作手套、大號垃圾袋（處置排泄物/防水）。' },
+      { id: 'hh-special', text: '9. 特殊成員物資：嬰幼兒奶粉紙尿褲、長者助聽器電池/輔具、寵物飼料與牽繩。' },
+      { id: 'hh-app', text: '10. 數位維護提醒：下載「消防防災 e 點通 App」設定每 6 個月物資過期提醒。' }
+    ],
+    steps: [],
+    tips: [
+      '日常居家儲備應採「先進先出」原則隨時補充，分散放置避免單點破壞影響全家防護。'
     ]
   }
 ];

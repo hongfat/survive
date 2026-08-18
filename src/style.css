@@ -476,6 +476,18 @@ body {
   color: var(--text-primary);
 }
 
+.guide-card a {
+  color: var(--accent-amber);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: var(--transition);
+}
+
+.guide-card a:hover {
+  color: #ffffff;
+}
+
 .steps-list li::before {
   content: counter(step-counter);
   position: absolute;

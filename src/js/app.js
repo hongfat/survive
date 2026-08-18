@@ -297,7 +297,7 @@ function loadEmergencyMemoToForm() {
   if (document.getElementById('memo-blood')) document.getElementById('memo-blood').value = memo.bloodType || '';
   if (document.getElementById('memo-contact-name')) document.getElementById('memo-contact-name').value = memo.contactName || '';
   if (document.getElementById('memo-contact-phone')) document.getElementById('memo-contact-phone').value = memo.contactPhone || '';
-  if (document.getElementById('memo-1991-phone')) document.getElementById('memo-1991-phone').value = memo.mnd1991Phone || '';
+  if (document.getElementById('memo-disaster-app-phone')) document.getElementById('memo-disaster-app-phone').value = memo.disasterAppPhone || '';
   if (document.getElementById('memo-meeting-point')) document.getElementById('memo-meeting-point').value = memo.meetingPoint || '';
   if (document.getElementById('memo-secondary-meeting-point')) document.getElementById('memo-secondary-meeting-point').value = memo.secondaryMeetingPoint || '';
   if (document.getElementById('memo-notes')) document.getElementById('memo-notes').value = memo.notes || '';
@@ -309,7 +309,7 @@ function handleSaveEmergencyMemo() {
     bloodType: document.getElementById('memo-blood')?.value || '',
     contactName: document.getElementById('memo-contact-name')?.value || '',
     contactPhone: document.getElementById('memo-contact-phone')?.value || '',
-    mnd1991Phone: document.getElementById('memo-1991-phone')?.value || '',
+    disasterAppPhone: document.getElementById('memo-disaster-app-phone')?.value || '',
     meetingPoint: document.getElementById('memo-meeting-point')?.value || '',
     secondaryMeetingPoint: document.getElementById('memo-secondary-meeting-point')?.value || '',
     notes: document.getElementById('memo-notes')?.value || ''

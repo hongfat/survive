@@ -251,6 +251,20 @@ body {
   margin-bottom: 1.25rem;
 }
 
+.search-desc a {
+  color: var(--accent-amber);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition);
+  position: relative;
+  z-index: 5;
+}
+
+.search-desc a:hover {
+  color: #ffffff;
+}
+
 .search-bar {
   position: relative;
   max-width: 600px;

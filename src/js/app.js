@@ -336,8 +336,16 @@ function updateCalculatorResults() {
   document.getElementById('res-batteries').textContent = res.aaBatteriesNeeded;
 }
 
-function downloadSingleHtml() {
-  const htmlContent = document.documentElement.outerHTML;
+async function downloadSingleHtml() {
+  // 優先取得原始 HTML（可由 SW 快取離線提供），避免匯出搜尋、勾選等執行期狀態
+  let htmlContent;
+  try {
+    const res = await fetch(location.href.split('#')[0], { cache: 'force-cache' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    htmlContent = await res.text();
+  } catch (e) {
+    htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+  }
   const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');

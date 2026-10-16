@@ -1,6 +1,7 @@
 export function calculateSurviveSupplies({ persons = 1, days = 3, season = 'summer', hasVulnerable = false }) {
-  const p = Math.max(1, parseInt(persons) || 1);
-  const d = Math.max(1, parseInt(days) || 1);
+  // 與輸入欄位的 min / max 一致，避免極端數值造成畫面異常
+  const p = Math.min(100, Math.max(1, parseInt(persons) || 1));
+  const d = Math.min(90, Math.max(1, parseInt(days) || 1));
 
   // 水分需求：基本飲用 3 公升 / 天，夏季或高溫加增至 4 公升 / 天
   const drinkingWaterPerPersonDay = season === 'summer' ? 4 : 3;

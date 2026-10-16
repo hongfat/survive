@@ -1,7 +1,8 @@
+import { acquireTorch, setTorch, releaseTorch } from './torch.js';
+
 let audioCtx = null;
 let sosInterval = null;
 let isSosActive = false;
-let torchTrack = null;
 
 // Morse code timing (ms)
 const DOT_DURATION = 150;
@@ -26,21 +27,12 @@ export async function startSosSignal({ onBlinkChange }) {
     await audioCtx.resume();
   }
 
-  // 嘗試獲取手電筒控制權
-  try {
-    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: 'environment' }
-      });
-      const track = stream.getVideoTracks()[0];
-      const capabilities = track.getCapabilities ? track.getCapabilities() : {};
-      if (capabilities.torch) {
-        torchTrack = track;
-      }
-    }
-  } catch (err) {
-    // 忽略相機權限未獲取，退回使用螢幕閃爍
-    torchTrack = null;
+  // 嘗試獲取手電筒控制權；未取得時退回使用螢幕閃爍
+  await acquireTorch();
+  // 等待權限期間使用者可能已按下停止
+  if (!isSosActive) {
+    releaseTorch();
+    return;
   }
 
   // 執行 SOS 循環
@@ -53,15 +45,7 @@ export function stopSosSignal({ onBlinkChange }) {
     clearTimeout(sosInterval);
     sosInterval = null;
   }
-  if (torchTrack) {
-    try {
-      torchTrack.applyConstraints({ advanced: [{ torch: false }] });
-      torchTrack.stop();
-    } catch (e) {
-      // ignore
-    }
-    torchTrack = null;
-  }
+  releaseTorch();
   if (onBlinkChange) {
     onBlinkChange(false);
   }
@@ -85,14 +69,6 @@ function playBeep(duration) {
     osc.stop(audioCtx.currentTime + duration / 1000);
   } catch (e) {
     console.error('Audio error:', e);
-  }
-}
-
-function setTorch(state) {
-  if (torchTrack) {
-    try {
-      torchTrack.applyConstraints({ advanced: [{ torch: state }] });
-    } catch (e) {}
   }
 }
 
